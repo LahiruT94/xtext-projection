@@ -1,0 +1,2 @@
+include 'com.ifs.lang.projection'
+include 'com.ifs.lang.projection.ide'

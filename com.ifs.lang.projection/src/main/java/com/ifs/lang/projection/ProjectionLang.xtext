@@ -1,0 +1,33 @@
+grammar com.ifs.lang.projection.ProjectionLang with org.eclipse.xtext.common.Terminals
+
+generate projectionLang "http://www.ifs.com/lang/projection/ProjectionLang"
+
+Model:
+	(elements+=Type)*;
+	
+Type:
+    Projection | Component | Layer | Description | Category | Entityset;
+    
+Projection:
+	'projection' name=ID ';'
+;
+
+Component:
+	'component' name=ID ';'
+;
+
+Layer:
+	'layer' name=ID ';'
+;
+
+Description:
+	'description' name=STRING ';'
+;
+
+Category:
+	'category' name=ID ';'
+;
+
+Entityset:
+	'entityset' name=ID 'for' entity=ID ';'
+;
